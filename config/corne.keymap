@@ -7,16 +7,14 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#define RIGHT 2
-#define LEFT 1
-#define MOUSE 3
+
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <LEFT RIGHT>;
-            then-layer = <MOUSE>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
@@ -36,7 +34,7 @@
 &kp TAB     &kp Q               &kp W           &kp E     &kp R     &kp T        &kp Y    &kp U          &kp I      &kp O                &kp P                     &kp ESC
 &kp LSHIFT  &mt LEFT_SHIFT A    &kp S           &kp D     &kp F     &kp G        &kp H    &kp J          &kp K      &kp L                &mt LEFT_SHIFT SEMICOLON  &kp SQT
 &kp LCTRL   &mt LEFT_CONTROL Z  &mt LEFT_ALT X  &kp C     &kp V     &kp B        &kp N    &kp M          &kp COMMA  &mt LEFT_ALT PERIOD  &mt LCTRL SLASH           &kp RIGHT_ALT
-                                                &kp LGUI  &mo LEFT  &kp SPACE  &kp RET  &mo RIGHT          &kp BACKSPACE
+                                                &kp LGUI  &mo 1  &kp SPACE  &kp RET  &mo 2          &kp BACKSPACE
             >;
         };
 
