@@ -11,16 +11,6 @@
 
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
-};
-
-/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -66,15 +56,6 @@
 &kp CAPSLOCK  &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans    &trans    &trans  &trans     &trans   &trans
                                           &trans        &trans        &trans          &trans    &trans    &trans
-            >;
-        };
-
-        tri {
-            bindings = <
-&trans  &trans            &trans        &trans        &trans  &trans    &trans     &mwh SCROLL_UP  &mmv MOVE_UP    &mwh SCROLL_DOWN  &trans  &trans
-&trans  &kp LEFT_SHIFT    &trans        &trans        &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &trans  &trans
-&trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &trans  &trans    &trans     &trans          &trans          &trans            &trans  &trans
-                                        &trans        &trans  &trans    &mkp LCLK  &mkp MCLK       &mkp RCLK
             >;
         };
     };
