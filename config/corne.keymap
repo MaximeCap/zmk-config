@@ -16,27 +16,6 @@
 };
 
 / {
-    macros {
-        mac_left_desk: mac_left_desk {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "MAC_LEFT_DESK";
-        };
-    };
-
-    behaviors {
-        shift: shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -48,10 +27,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q                &kp W           &kp E     &kp R  &kp T          &kp Y    &kp U  &kp I          &kp O                &kp P                     &kp ESC
-&kp LSHIFT  &shift LEFT_SHIFT A  &kp S           &kp D     &kp F  &kp G          &kp H    &kp J  &kp K          &kp L                &mt LEFT_SHIFT SEMICOLON  &kp SQT
-&kp LCTRL   &mt LEFT_CONTROL Z   &mt LEFT_ALT X  &kp C     &kp V  &kp B          &kp N    &kp M  &kp COMMA      &mt LEFT_ALT PERIOD  &mt LCTRL SLASH           &kp RIGHT_ALT
-                                                 &kp LGUI  &mo 1  &lt 3 SPACE    &kp RET  &mo 2  &kp BACKSPACE
+&kp TAB     &kp Q               &kp W           &kp E     &kp R  &kp T          &kp Y    &kp U  &kp I          &kp O                &kp P                     &kp ESC
+&kp LSHIFT  &none               &kp S           &kp D     &kp F  &kp G          &kp H    &kp J  &kp K          &kp L                &mt LEFT_SHIFT SEMICOLON  &kp SQT
+&kp LCTRL   &mt LEFT_CONTROL Z  &mt LEFT_ALT X  &kp C     &kp V  &kp B          &kp N    &kp M  &kp COMMA      &mt LEFT_ALT PERIOD  &mt LCTRL SLASH           &kp RIGHT_ALT
+                                                &kp LGUI  &mo 1  &lt 3 SPACE    &kp RET  &mo 2  &kp BACKSPACE
             >;
         };
 
