@@ -27,10 +27,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q               &kp W           &kp E     &kp R  &kp T          &kp Y    &kp U  &kp I          &kp O                &kp P                     &kp ESC
-&kp LSHIFT  &mt LEFT_SHIFT A    &kp S           &kp D     &kp F  &kp G          &kp H    &kp J  &kp K          &kp L                &mt LEFT_SHIFT SEMICOLON  &kp SQT
-&kp LCTRL   &mt LEFT_CONTROL Z  &mt LEFT_ALT X  &kp C     &kp V  &kp B          &kp N    &kp M  &kp COMMA      &mt LEFT_ALT PERIOD  &mt LCTRL SLASH           &kp RIGHT_ALT
-                                                &kp LGUI  &mo 1  &lt 3 SPACE    &kp RET  &mo 2  &kp BACKSPACE
+&kp PRINTSCREEN  &kp Q               &kp W           &kp E             &kp R  &kp T          &kp Y    &kp U         &kp I       &kp O                &kp P                     &kp ESC
+&kp C_NEXT       &mt LEFT_SHIFT A    &kp S           &kp D             &kp F  &kp G          &kp H    &kp J         &kp K       &kp L                &mt LEFT_SHIFT SEMICOLON  &kp SQT
+&kp C_PREVIOUS   &mt LEFT_CONTROL Z  &mt LEFT_ALT X  &kp C             &kp V  &kp B          &kp N    &kp M         &kp COMMA   &mt LEFT_ALT PERIOD  &mt LCTRL SLASH           &kp C_PLAY_PAUSE
+                                                     &mt LEFT_GUI TAB  &mo 1  &lt 3 SPACE    &kp RET  &lt 2 DELETE  &kp ESCAPE
             >;
         };
 
